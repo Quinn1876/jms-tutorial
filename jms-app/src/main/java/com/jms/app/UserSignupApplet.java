@@ -28,6 +28,7 @@ public class UserSignupApplet {
 				.build();
 		try {
 			Connection connection = connectionFactory.createConnection(AppacheMQConfigurations.getUser(), AppacheMQConfigurations.getPwd());
+			connection.start();
 			Session session = connection.createSession(false, Session.AUTO_ACKNOWLEDGE);
 			Topic topic = session.createTopic(Topics.USER_SIGN_UP);
 			MessageProducer producer = session.createProducer(topic);

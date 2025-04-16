@@ -22,7 +22,7 @@ import org.apache.activemq.ActiveMQConnectionFactory;
  */
 public class ActiveMQMessageConsumer implements MessageListener {
  
-    private String activeMqBrokerUri;
+	private String activeMqBrokerUri;
     private String username;
     private String password;
  
